@@ -13,3 +13,4 @@ const db = mysql.createConnection({
 },
 console.log("Employee Tracker Database loaded")
 );
+db();
