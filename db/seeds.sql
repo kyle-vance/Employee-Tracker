@@ -24,7 +24,8 @@ VALUES
     ("Krace", "Maw", 4, null),
     ("Trevor", "Jex", 5, 3), 
     ("Ryan", "Larson", 6, null),
-    ("Daniel", "Jenkins", 7, 4), 
+    ("Timothy", "Knight", 13, 4)
+    ("Daniel", "Jenkins", 7, null), 
     ("Jordan", "Jones", 8, 1);
     ("Brandon", "Jex", 9, 2);
     ("Quinn", "Peterson", 10, 3);
