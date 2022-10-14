@@ -11,13 +11,13 @@ const db = mysql.createConnection({
 },
     console.log("Employee Tracker Database loaded"),
 );
-
+// Establish connection
 db.connect(function (err) {
     if (err) throw err;
     menu();
 });
 
-
+// Nain menu function
 function menu() {
     inquirer
         .prompt([
@@ -68,7 +68,7 @@ function menu() {
         });
 }
 
-
+// View departments
 function viewDepartments() {
     db.query('SELECT * FROM department', (err, data) => {
         console.log(db.query)
@@ -77,7 +77,7 @@ function viewDepartments() {
         menu();
     });
 }
-
+// View roles
 function viewRoles() {
     db.query('SELECT role.id AS ID, role.title AS Title, role.salary AS Salary, department.name AS Department FROM role JOIN department ON role.department_id = department.id', (err, data) => {
         if (err) throw err;
@@ -85,7 +85,7 @@ function viewRoles() {
         menu();
     });
 }
-
+// View employees
 function viewEmployees() {
     db.query(
         "SELECT employee.id AS ID, employee.first_name AS First, employee.last_name as Last, role.title AS Title, role.salary AS Salary, department.name AS Department, CONCAT(manager.first_name, ' ', manager.last_name) AS Manager FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id LEFT JOIN employee manager ON manager.id = employee.manager_id", (err, data) => {
@@ -94,7 +94,7 @@ function viewEmployees() {
             menu();
         });
 }
-
+// Add department
 function addDepartment() {
     inquirer
         .prompt([
@@ -111,7 +111,7 @@ function addDepartment() {
             );
         });
 }
-
+// Add role
 function addRole() {
     db.query("SELECT * FROM department", (err, data) => {
         if (err) throw err;
