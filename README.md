@@ -5,6 +5,10 @@
 ## Description
 This is a node based application used to manage a workforce. It is set up to allow a user to view, add and manage departments, roles, and employees. 
 
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/105682564/195934039-01782ad8-0a81-402a-9288-a2125c9aa757.png">
+
+<a href="https://drive.google.com/file/d/1mIA34QtqcoZKg_xk3SoUVcwYoYsiMAHF/view">Link to Video Walkthrough</a>
+
 ---
 
 ## Table of Contents
